@@ -1,12 +1,25 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class="jdcard">
+    <view class="jdcard-company">
+      <image class="jdcard-companyimg" src="../../images/my.png"></image>
+    </view>
+    <view class="jdcard-cont">
+      <view class="jdcard-cont-tit">
+        小铁锅
+      </view>
+      <view class="jdcard-cont-time">
+        早上9:00-11:00顿饭吃
+      </view>
+      <view class="jdcard-cont-tag">
+        铁的，不大，好用
+      </view>
+    </view>
+    <view class="jdcard-bindtap">
+      做个点击事件
+    </view>
   </view>
+  
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>

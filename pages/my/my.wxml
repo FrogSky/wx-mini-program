@@ -1,7 +1,5 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
 <!--index.wxml-->
-<view class="container">
+<view>
   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
@@ -9,12 +7,13 @@
   <view class="info_list">
     <block wx:for="{{userListInfo}}">
         <view class="weui_cell">
-            <view class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
             <view class="weui_cell_bd">
-                <view class="weui_cell_bd_p"> {{item.text}} </view>
+                <view class="weui_cell_bd_p">
+                  <span class="{{item.iconClass}}"> </span> 
+                  <span>{{item.text}}</span>
+                  <span class="weui_cell_msg">{{item.detail}}</span>
+                </view>
             </view>
-            <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>
-            <view class="with_arrow"></view>
         </view>
     </block>
   </view>

@@ -5,17 +5,27 @@
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.jdcard{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.jdcard-company{
+  flex:1;
+  background: red;
+  overflow: hidden;
 }
-
-.usermotto {
-  margin-top: 200px;
+.jdcard-companyimg{
+  width:100%;
+  height: 20px;
+}
+.jdcard-cont{
+  flex:2;
+  overflow: hidden;
+  background: blue;
+}
+.jdcard-bindtap{
+  flex:1;
+  overflow: hidden;
+  background: green;
 }
